@@ -566,7 +566,7 @@ class ZscoreSustain(AbstractSustain):
         Z_vals = np.tile(np.arange(1, 4), (n_biomarkers, 1))
         Z_vals[0, 2] = 0
 
-        Z_max = np.full(5, n_biomarkers)
+        Z_max = np.full((n_biomarkers,), 5)
         Z_max[2] = 2
 
         ground_truth_sequences = cls.generate_random_model(Z_vals, n_subtypes)
